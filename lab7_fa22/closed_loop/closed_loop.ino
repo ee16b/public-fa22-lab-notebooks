@@ -17,8 +17,8 @@ volatile int left_count = 0;
 volatile int right_count = 0;
 
 int16_t deltaArr[SAMPLE_LEN] = {0};
-uint16_t lpos[SAMPLE_LEN] = {0};
-uint16_t rpos[SAMPLE_LEN] = {0};
+int16_t lpos[SAMPLE_LEN] = {0};
+int16_t rpos[SAMPLE_LEN] = {0};
 uint8_t lpwm[SAMPLE_LEN] = {0};
 uint8_t rpwm[SAMPLE_LEN] = {0};
 
