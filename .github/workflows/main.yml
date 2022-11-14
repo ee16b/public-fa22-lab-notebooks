@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - name: Get lab directory
         id: file
-        run: echo '::set-output name=f::"$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep "lab*_*" | sed 's%/[^/]*$%/%' | cut -d/ -f1 | sort -u)"'
+        run: echo '::set-output name=f::"$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | sed 's%/[^/]*$%/%' | cut -d/ -f1 | sort -u | grep "lab*_*")"'
       - name: Generate Zip
         id: zip_gen
         run: >
